@@ -19,12 +19,29 @@ class App1 extends Component {
   }
 }
 
+const so = [1,2,3,4,5,6,7,8,9];
+const so2 = so.map((x)=>x*2);
+const so3 = so.map((x)=>(
+    <li>So: {x}</li>
+));
+ class App2 extends Component {
+   render() {
+     return (
+       <div>
+         {so3}
+       </div>
+     );
+   }
+ }
+ 
+
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <App1/>
+        <App2/>
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
