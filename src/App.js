@@ -16,6 +16,22 @@ function NumberOne(props){
   )
 }
 
+class NumberTwo extends Component {
+  render() {
+    return (
+      <div className="col-4">
+        <div className="card">
+          <image className="card-img-top" src={this.props.linkanh} alt=""/>
+          <div>
+            <h4 className="card-title">{this.props.tieude}</h4>
+            <p className="card-text"></p>
+          </div>
+        </div>
+      </div>
+    );
+  }
+}
+
 function App() {
   return (
     <div className="App">
@@ -37,6 +53,7 @@ function App() {
         <div className="row">
           <NumberOne tieude="san pham 1" linkanh="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4PuS9SBFBVkLGJam0-CuSlu2S2BOPTkYIGfeIPnAK-eZ-oh6u"/>
           <NumberOne tieude="san pham 2" linkanh="https://trithucvn.net/wp-content/uploads/2018/03/hoa-hong.jpeg"/>
+          <NumberTwo tieude="san pham 3" linkanh="http://vuahatgiong.com/wp-content/uploads/2016/02/hoa-oai-huong.jpg"/>
         </div>
       </div>
     </div>
