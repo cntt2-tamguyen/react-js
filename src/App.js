@@ -11,6 +11,20 @@ function One (){
   );
 }
 
+var Two = function(){
+  return(
+    <div>
+      <h3>Cach so 2</h3>
+    </div>
+  )
+}
+
+var Three =() =>( 
+  <div>
+    <h3>Cach so 3</h3>
+  </div>
+);
+
 function App() {
   return (
     <div className="App">
@@ -29,6 +43,8 @@ function App() {
           Learn React
         </a>
       </header>
+      <Two/>
+      <Three/>
     </div>
   );
 }
