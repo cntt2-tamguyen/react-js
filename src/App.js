@@ -20,10 +20,21 @@ var Two = function(){
 }
 
 var Three =() =>( 
-  <div>
-    <h3>Cach so 3</h3>
-  </div>
-);
+                  <div>
+                    <h3>Cach so 3</h3>
+                  </div>
+                );
+
+class Four extends Component {
+  render() {
+    return (
+      <div>
+        <button> React js component so 4</button>
+      </div>
+    );
+  }
+}
+
 
 function App() {
   return (
@@ -45,6 +56,8 @@ function App() {
       </header>
       <Two/>
       <Three/>
+      <hr/>
+      <Four/> 
     </div>
   );
 }
