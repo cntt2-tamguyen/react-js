@@ -10,9 +10,19 @@ function App() {
     <div className="_013">
       <TopMenu/>
       <Header/>
-      <Content tieude="Tin tuc so 1" vitri1="order-lg-2" anh="img/01.jpg" trichdan="day la trci dan so 1"/>
-      <Content tieude="Tin tuc so 2" anh="img/02.jpg" trichdan="day la trci dan so 2"/>
-      <Content tieude="Tin tuc so 3" vitri1="order-lg-2" anh="img/03.jpg" trichdan="day la trci dan so 3"/>
+      <div className="container">
+      <div className="row pt-5">
+      <Content tieude="Tin tuc so 1" anh="img/01.jpg" trichdan="day la trci dan so 1 aawyg iuwkljhASKG vuatgw ajehgdiauwdg  auseyrdgf"/>
+      <Content tieude="Tin tuc so 2" anh="img/02.jpg" trichdan="day la trci dan so 2 awu grhuaywg aweyj rgaiuy wg"/>
+      <Content tieude="Tin tuc so 3" anh="img/03.jpg" trichdan="Boots  asudygawuyer aUSYDGu awed bayudgfa vf awuyedtgawd aewuytdu"/>
+      <Content tieude="Tin tuc so 1" anh="img/01.jpg" trichdan="day la trci dan so 1 aawyg iuwkljhASKG vuatgw ajehgdiauwdg  auseyrdgf"/>
+      <Content tieude="Tin tuc so 2" anh="img/02.jpg" trichdan="day la trci dan so 2 awu grhuaywg aweyj rgaiuy wg"/>
+      <Content tieude="Tin tuc so 3" anh="img/03.jpg" trichdan="Boots  asudygawuyer aUSYDGu awed bayudgfa vf awuyedtgawd aewuytdu"/>
+      <Content tieude="Tin tuc so 1" anh="img/01.jpg" trichdan="day la trci dan so 1 aawyg iuwkljhASKG vuatgw ajehgdiauwdg  auseyrdgf"/>
+      <Content tieude="Tin tuc so 2" anh="img/02.jpg" trichdan="day la trci dan so 2 awu grhuaywg aweyj rgaiuy wg"/>
+      <Content tieude="Tin tuc so 3" anh="img/03.jpg" trichdan="Boots  asudygawuyer aUSYDGu awed bayudgfa vf awuyedtgawd aewuytdu"/>
+      </div>
+      </div>
     </div>
   );
 }
