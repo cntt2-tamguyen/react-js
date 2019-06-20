@@ -32,8 +32,8 @@ class Content extends Component {
     renderForm = () => (
         <div className="row">
             <div className="form-group">
-                <input type="text" name="ten" defaultValue={this.props.tieude} className="form-control" />
-                <div className="btn btn-block btn-danger" onClick={()=>this.saveClick()}>Save</div>
+                <input type="text" name="ten" ref={(duLieuNhap)=>{this.trungGian=duLieuNhap}} defaultValue={this.props.tieude} className="form-control" />
+                <div className="btn btn-block btn-danger"  onClick={()=>this.saveClick()}>Save</div>
             </div>
         </div>
     )
@@ -51,6 +51,7 @@ class Content extends Component {
     }
     saveClick = () => {
         this.setState({trangThai:0});
+        console.log(this.trungGian.value);
     }
 
     render() {
@@ -60,7 +61,7 @@ class Content extends Component {
                     <div className="row">
                         <div className="col-lg-5">
                             <div className="p-1">
-                                <img className="img-fluid rounded-circle" src={this.props.anh} alt />
+                                <img className="img-fluid rounded-circle" src={this.props.anh} />
                             </div>
                         </div>
                         <div className="col-lg-7">
