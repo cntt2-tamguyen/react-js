@@ -32,7 +32,7 @@ class Content extends Component {
     renderForm = () => (
         <div className="row">
             <div className="form-group">
-                <input type="text" name="ten" className="form-control" />
+                <input type="text" name="ten" defaultValue={this.props.tieude} className="form-control" />
                 <div className="btn btn-block btn-danger" onClick={()=>this.saveClick()}>Save</div>
             </div>
         </div>
