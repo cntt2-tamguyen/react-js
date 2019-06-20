@@ -4,7 +4,7 @@ class Content extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            trangthai:0
+            trangThai:0
         }
     }
 
@@ -20,6 +20,32 @@ class Content extends Component {
         alert(x)
     }
     
+    renderButton = () => (
+        <div className="row">
+            <div className="btn btn-group">
+                <div className="btn btn-info">Edit</div>
+                <div className="btn btn-warning">Remove</div>
+            </div>
+        </div>
+    )
+
+    renderForm = () => (
+        <div classname="row">
+            <div className="form-group">
+                <input type="text" name="ten" id className="form-control" />
+                <div className="btn btn-block btn-danger" >Save</div>
+            </div>
+        </div>
+    )
+
+    displayCheck = () => {
+        if(this.state.trangThai === 0){
+            return this.renderButton();
+        } else{
+            return this.renderForm();
+        }
+    }
+
     render() {
         return (
             <section>
@@ -35,18 +61,7 @@ class Content extends Component {
                                 <h2 className="display-6">{this.props.tieude}</h2>
                                 <p>{this.props.trichdan}</p>
                             </div>
-                            <div className="row">
-                                <div className="btn btn-group">
-                                    <div className="btn btn-info" onClick={this.thongbao}>Edit</div>
-                                    <div className="btn btn-warning" onClick={this.thongbao2}>Remove</div>
-                                </div>
-                            </div>
-                            <div classname="row">
-                                <div className="form-group">
-                                    <input type="text" name="ten" id className="form-control" />
-                                    <div className="btn btn-block btn-danger" onclick="{this.thongbao}">Save</div>
-                                </div>
-                            </div>
+                            {this.displayCheck()}
                             <hr/>
                         </div>
                     </div>
