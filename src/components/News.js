@@ -4,7 +4,6 @@ import dl from './dulieu.json';
 
 class News extends Component {
     render() {
-        console.log(dl);
         return (
             <div>
                 <header className="masthead tintuc">
@@ -21,15 +20,13 @@ class News extends Component {
                 {/* begin tin tuc */}
                 <div className="container">
                     <div className="row mt-3">
-                        <NewsItem></NewsItem>
-                        <NewsItem></NewsItem>
-                        <NewsItem></NewsItem>
-                        <NewsItem></NewsItem>
-                        <NewsItem></NewsItem>
-                        <NewsItem></NewsItem>
-                        <NewsItem></NewsItem>
-                        <NewsItem></NewsItem>
-                        <NewsItem></NewsItem>
+                        {
+                            dl.map((value,key)=>{
+                                return(
+                                    <NewsItem key={key} anh={value.anh} tieuDe={value.tieuDe} trichDan={value.trichDan}></NewsItem>
+                                )
+                            })
+                        }
                     </div>
                 </div>
                 {/* end tin tuc  */}
