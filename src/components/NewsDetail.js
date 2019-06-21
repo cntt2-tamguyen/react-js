@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import dl from './dulieu.json'
+import NewsRelated from './NewsRelated.js';
 
 class NewsDetail extends Component {
     render() {
@@ -22,7 +23,7 @@ class NewsDetail extends Component {
           dl.map((value,key)=>{
             if(value.id== this.props.match.params.id){
               return(
-                <div className="jumbotron jumbotron-fluid">
+                <div className="jumbotron jumbotron-fluid" key={key}>
                 <div className="container">
                   <img src={value.anh} className="img-fluid rong100" alt="react" />
                   <h3 className="lead text-center">{value.tieuDe}</h3>
@@ -42,34 +43,18 @@ class NewsDetail extends Component {
                   </div>
                   <div className="col-12">
                     <div className="card-deck">
-                      <div className="card">
-                        <a href="/tin"><img className="card-img-top" src="http://placehold.it/500x300" alt="react" /></a>
-                        <div className="card-body">
-                          <h4 className="card-title">Title</h4>
-                          <p className="card-text">Text</p>
-                        </div>
-                      </div>
-                      <div className="card">
-                        <a href="/tin"><img className="card-img-top" src="http://placehold.it/500x300" alt="react" /></a>
-                        <div className="card-body">
-                          <h4 className="card-title">Title</h4>
-                          <p className="card-text">Text</p>
-                        </div>
-                      </div>
-                      <div className="card">
-                        <a href="/tin"><img className="card-img-top" src="http://placehold.it/500x300" alt="react" /></a>
-                        <div className="card-body">
-                          <h4 className="card-title">Title</h4>
-                          <p className="card-text">Text</p>
-                        </div>
-                      </div>
-                      <div className="card">
-                        <a href="/tin"><img className="card-img-top" src="http://placehold.it/500x300" alt="react" /></a>
-                        <div className="card-body">
-                          <h4 className="card-title">Title</h4>
-                          <p className="card-text">Text</p>
-                        </div>
-                      </div>
+                      {
+                        dl.map((value,key)=>{
+                          if(key<=3){
+                            return(
+                              <NewsRelated key={key} anh={value.anh} tieuDe={value.tieuDe} trichDan={value.trichDan} tinId={value.id}>
+
+                              </NewsRelated>
+                            )
+                          }
+                          
+                        })
+                      }
                     </div>
                   </div>   
                 </div>

@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Link} from "react-router-dom";
 
-class NewsItem extends Component {
-    constructor(props) {
-        super(props);
-    }
+class NewsRelated extends Component {
     chuyenDoiURL = (str) => 
     {
         // Chuyển hết sang chữ thường
@@ -36,20 +33,17 @@ class NewsItem extends Component {
     }
     render() {
         return (
-            <div className="col-4">
-                <div className="card-deck">
-                    <div className="card">
-                        <Link to={"/tin-tuc/"+this.chuyenDoiURL(this.props.tieuDe)+"."+this.props.tinId+".html"}><img className="card-img-top" src={this.props.anh} alt="react" /></Link>
-                        <div className="card-body">
-                            <h4 className="card-title"> <a href={"/tin-tuc/"+this.chuyenDoiURL(this.props.tieuDe)+"."+this.props.tinId+".html"}>{this.props.tieuDe}</a></h4>
-                            <p className="card-text">{this.props.trichDan}</p>
-                        </div>
-                    </div>
-                </div>
-                <hr />
-            </div>  
+            <div className="card">
+             <Link to={"/tin-tuc/"+this.chuyenDoiURL(this.props.tieuDe)+"."+this.props.tinId+".html"}>
+                <img className="card-img-top" src={this.props.anh} alt="react" />
+            </Link>
+            <div className="card-body">
+              <h4 className="card-title">{this.props.tieuDe}</h4>
+              <p className="card-text">{this.props.trichDan}</p>
+            </div>
+          </div>
         );
     }
 }
 
-export default NewsItem;
+export default NewsRelated;
