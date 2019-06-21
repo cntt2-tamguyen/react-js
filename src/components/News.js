@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
+import NewsItem from './NewsItem';
+import dl from './dulieu.json';
 
 class News extends Component {
     render() {
+        console.log(dl);
         return (
             <div>
                 <header className="masthead tintuc">
@@ -18,114 +21,15 @@ class News extends Component {
                 {/* begin tin tuc */}
                 <div className="container">
                     <div className="row mt-3">
-                    <div className="col-4">
-                        <div className="card-deck">
-                        <div className="card">
-                            <a href="/tin-chi-tiet"><img className="card-img-top" src="http://placehold.it/800x400" alt="react" /></a>
-                            <div className="card-body">
-                            <h4 className="card-title"> <a href="/tin-chi-tiet">Tin tuc so 2</a></h4>
-                            <p className="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui labore porro dolor architecto inventore explicabo sint ad provident earum nam, rem nemo cupiditate laborum, aut magni aliquam molestias voluptates voluptatibus?</p>
-                            </div>
-                        </div>
-                        </div>
-                        <hr />
-                    </div>
-                    <div className="col-4">
-                        <div className="card-deck">
-                        <div className="card">
-                            <a href="/tin-chi-tiet"><img className="card-img-top" src="http://placehold.it/800x400" alt="react" /></a>
-                            <div className="card-body">
-                            <h4 className="card-title"> <a href="/tin-chi-tiet">Tin tuc so 2</a></h4>
-                            <p className="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui labore porro dolor architecto inventore explicabo sint ad provident earum nam, rem nemo cupiditate laborum, aut magni aliquam molestias voluptates voluptatibus?</p>
-                            </div>
-                        </div>
-                        </div>
-                        <hr />
-                    </div>
-                    <div className="col-4">
-                        <div className="card-deck">
-                        <div className="card">
-                            <a href="/tin-chi-tiet"><img className="card-img-top" src="http://placehold.it/800x400" alt="react" /></a>
-                            <div className="card-body">
-                            <h4 className="card-title"> <a href="/tin-chi-tiet">Tin tuc so 2</a></h4>
-                            <p className="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui labore porro dolor architecto inventore explicabo sint ad provident earum nam, rem nemo cupiditate laborum, aut magni aliquam molestias voluptates voluptatibus?</p>
-                            </div>
-                        </div>
-                        </div>
-                        <hr />
-                    </div>
-                    <div className="col-4">
-                        <div className="card-deck">
-                        <div className="card">
-                            <a href="/tin-chi-tiet"><img className="card-img-top" src="http://placehold.it/800x400" alt="react" /></a>
-                            <div className="card-body">
-                            <h4 className="card-title"> <a href="/tin-chi-tiet">Tin tuc so 2</a></h4>
-                            <p className="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui labore porro dolor architecto inventore explicabo sint ad provident earum nam, rem nemo cupiditate laborum, aut magni aliquam molestias voluptates voluptatibus?</p>
-                            </div>
-                        </div>
-                        </div>
-                        <hr />
-                    </div>
-                    <div className="col-4">
-                        <div className="card-deck">
-                        <div className="card">
-                            <a href="/tin-chi-tiet"><img className="card-img-top" src="http://placehold.it/800x400" alt="react" /></a>
-                            <div className="card-body">
-                            <h4 className="card-title"> <a href="/tin-chi-tiet">Tin tuc so 2</a></h4>
-                            <p className="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui labore porro dolor architecto inventore explicabo sint ad provident earum nam, rem nemo cupiditate laborum, aut magni aliquam molestias voluptates voluptatibus?</p>
-                            </div>
-                        </div>
-                        </div>
-                        <hr />
-                    </div>
-                    <div className="col-4">
-                        <div className="card-deck">
-                        <div className="card">
-                            <a href="/tin-chi-tiet"><img className="card-img-top" src="http://placehold.it/800x400" alt="react" /></a>
-                            <div className="card-body">
-                            <h4 className="card-title"> <a href="/tin-chi-tiet">Tin tuc so 2</a></h4>
-                            <p className="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui labore porro dolor architecto inventore explicabo sint ad provident earum nam, rem nemo cupiditate laborum, aut magni aliquam molestias voluptates voluptatibus?</p>
-                            </div>
-                        </div>
-                        </div>
-                        <hr />
-                    </div>
-                    <div className="col-4">
-                        <div className="card-deck">
-                        <div className="card">
-                            <a href="/tin-chi-tiet"><img className="card-img-top" src="http://placehold.it/800x400" alt="react" /></a>
-                            <div className="card-body">
-                            <h4 className="card-title"> <a href="/tin-chi-tiet">Tin tuc so 2</a></h4>
-                            <p className="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui labore porro dolor architecto inventore explicabo sint ad provident earum nam, rem nemo cupiditate laborum, aut magni aliquam molestias voluptates voluptatibus?</p>
-                            </div>
-                        </div>
-                        </div>
-                        <hr />
-                    </div>
-                    <div className="col-4">
-                        <div className="card-deck">
-                        <div className="card">
-                            <a href="/tin-chi-tiet"><img className="card-img-top" src="http://placehold.it/800x400" alt="react" /></a>
-                            <div className="card-body">
-                            <h4 className="card-title"> <a href="/tin-chi-tiet">Tin tuc so 2</a></h4>
-                            <p className="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui labore porro dolor architecto inventore explicabo sint ad provident earum nam, rem nemo cupiditate laborum, aut magni aliquam molestias voluptates voluptatibus?</p>
-                            </div>
-                        </div>
-                        </div>
-                        <hr />
-                    </div>
-                    <div className="col-4">
-                        <div className="card-deck">
-                        <div className="card">
-                            <a href="/tin-chi-tiet"><img className="card-img-top" src="http://placehold.it/800x400" alt="react" /></a>
-                            <div className="card-body">
-                            <h4 className="card-title"> <a href="/tin-chi-tiet">Tin tuc so 2</a></h4>
-                            <p className="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui labore porro dolor architecto inventore explicabo sint ad provident earum nam, rem nemo cupiditate laborum, aut magni aliquam molestias voluptates voluptatibus?</p>
-                            </div>
-                        </div>
-                        </div>
-                        <hr />
-                    </div>
+                        <NewsItem></NewsItem>
+                        <NewsItem></NewsItem>
+                        <NewsItem></NewsItem>
+                        <NewsItem></NewsItem>
+                        <NewsItem></NewsItem>
+                        <NewsItem></NewsItem>
+                        <NewsItem></NewsItem>
+                        <NewsItem></NewsItem>
+                        <NewsItem></NewsItem>
                     </div>
                 </div>
                 {/* end tin tuc  */}
