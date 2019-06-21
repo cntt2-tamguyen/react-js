@@ -23,7 +23,7 @@ class News extends Component {
                         {
                             dl.map((value,key)=>{
                                 return(
-                                    <NewsItem key={key} anh={value.anh} tieuDe={value.tieuDe} trichDan={value.trichDan}></NewsItem>
+                                    <NewsItem key={key} anh={value.anh} tieuDe={value.tieuDe} trichDan={value.trichDan} tinId={value.id}></NewsItem>
                                 )
                             })
                         }
