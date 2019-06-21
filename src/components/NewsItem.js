@@ -46,7 +46,7 @@ class NewsItem extends Component {
                     </div>
                 </div>
                 <hr />
-            </div>
+            </div>  
         );
     }
 }
