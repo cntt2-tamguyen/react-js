@@ -4,7 +4,7 @@ import NewsRelated from './NewsRelated.js';
 
 class NewsDetail extends Component {
     render() {
-        
+        var dem = 1;
         return (
             <div>
                 <header className="masthead tintuc">
@@ -45,12 +45,19 @@ class NewsDetail extends Component {
                     <div className="card-deck">
                       {
                         dl.map((value,key)=>{
-                          if(key<=3){
-                            return(
-                              <NewsRelated key={key} anh={value.anh} tieuDe={value.tieuDe} trichDan={value.trichDan} tinId={value.id}>
-
-                              </NewsRelated>
-                            )
+                          if(value.id != this.props.match.params.id){
+                            if(dem<=4){
+                              dem++;
+                              return(
+                                <NewsRelated 
+                                  key={key} 
+                                  anh={value.anh} 
+                                  tieuDe={value.tieuDe} 
+                                  trichDan={value.trichDan} 
+                                  tinId={value.id}>
+                                </NewsRelated>
+                              )
+                            }
                           }
                           
                         })
