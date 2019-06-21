@@ -45,28 +45,28 @@ class NewsDetail extends Component {
     <div className="col-12">
       <div className="card-deck">
         <div className="card">
-          <a href="TinTuc.html"><img className="card-img-top" src="http://placehold.it/500x300" alt="react" /></a>
+          <a href="/tin"><img className="card-img-top" src="http://placehold.it/500x300" alt="react" /></a>
           <div className="card-body">
             <h4 className="card-title">Title</h4>
             <p className="card-text">Text</p>
           </div>
         </div>
         <div className="card">
-          <a href="TinTuc.html"><img className="card-img-top" src="http://placehold.it/500x300" alt="react" /></a>
+          <a href="/tin"><img className="card-img-top" src="http://placehold.it/500x300" alt="react" /></a>
           <div className="card-body">
             <h4 className="card-title">Title</h4>
             <p className="card-text">Text</p>
           </div>
         </div>
         <div className="card">
-          <a href="TinTuc.html"><img className="card-img-top" src="http://placehold.it/500x300" alt="react" /></a>
+          <a href="/tin"><img className="card-img-top" src="http://placehold.it/500x300" alt="react" /></a>
           <div className="card-body">
             <h4 className="card-title">Title</h4>
             <p className="card-text">Text</p>
           </div>
         </div>
         <div className="card">
-          <a href="TinTuc.html"><img className="card-img-top" src="http://placehold.it/500x300" alt="react" /></a>
+          <a href="/tin"><img className="card-img-top" src="http://placehold.it/500x300" alt="react" /></a>
           <div className="card-body">
             <h4 className="card-title">Title</h4>
             <p className="card-text">Text</p>
