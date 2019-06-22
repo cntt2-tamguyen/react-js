@@ -29,7 +29,7 @@ class App extends Component {
       <div className="search-form">
         <div className="container">
           <div className="row">
-            <Search ketNoi={()=>this.doiTrangThai()}/>
+            <Search ketNoi={()=>this.doiTrangThai()} hienThiForm={this.state.hienThiForm}/>
             <TableData/>
             <AddUser hienThiForm={this.state.hienThiForm}/>
           </div>
