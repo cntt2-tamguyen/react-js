@@ -25,6 +25,13 @@ class Contact extends Component {
     })
   }
 
+  isFileChange = (event) => {
+    const tenanh = event.target.files[0].name
+    this.setState({
+      fAnh:tenanh
+    })
+  }
+
   getGiaTri = () => {
     var noiDung ="";
     noiDung += "Ten nhan duoc la: " + this.state.fName;
@@ -32,6 +39,7 @@ class Contact extends Component {
     noiDung += " / Phone nhan duoc la: " + this.state.fPhone;
     noiDung += " / Message nhan duoc la: " + this.state.fMess;
     noiDung += " / Ngay nhan duoc la: " + this.state.fNgay;
+    noiDung += " / Ten anh nhan duoc la: " + this.state.fAnh;
     return noiDung;
   }
 
@@ -101,16 +109,20 @@ class Contact extends Component {
                     </div>
                     <div className="control-group">
                       <div className="form-group floating-label-form-group controls mb-0 pb-2">
-                        <label>Chon ngay</label>
-                     
-                        
+                        <label>Chon ngay</label>                 
                          <select value={this.state.fNgay} className="form-control" name="fNgay" onChange={(event)=>this.isChange(event)}>
                            <option value="thu3">Ngày thứ 3</option>
                            <option value="thu5"> Ngày thứ 5</option>
                            <option value="thu7">Ngày thứ 7</option>
                            <option value="chunhat">Ngày chủ nhật</option>
-
                          </select>
+                        <p className="help-block text-danger" />
+                      </div>
+                    </div>
+                    <div className="control-group">
+                      <div className="form-group floating-label-form-group controls mb-0 pb-2">
+                        <label>Chon file</label>
+                        <input type="file" className="form-control-file" name="fAnh" onChange={(event)=>this.isFileChange(event)}/>
                         <p className="help-block text-danger" />
                       </div>
                     </div>
