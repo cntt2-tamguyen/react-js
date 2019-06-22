@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Link} from "react-router-dom";
+import {Link} from "react-router-dom";
 
 class NewsItem extends Component {
-    constructor(props) {
-        super(props);
-    }
     chuyenDoiURL = (str) => 
     {
         // Chuyển hết sang chữ thường
@@ -41,7 +38,7 @@ class NewsItem extends Component {
                     <div className="card">
                         <Link to={"/tin-tuc/"+this.chuyenDoiURL(this.props.tieuDe)+"."+this.props.tinId+".html"}><img className="card-img-top" src={this.props.anh} alt="react" /></Link>
                         <div className="card-body">
-                            <h4 className="card-title"> <a href={"/tin-tuc/"+this.chuyenDoiURL(this.props.tieuDe)+"."+this.props.tinId+".html"}>{this.props.tieuDe}</a></h4>
+                            <h4 className="card-title"> <Link to={"/tin-tuc/"+this.chuyenDoiURL(this.props.tieuDe)+"."+this.props.tinId+".html"}>{this.props.tieuDe}</Link></h4>
                             <p className="card-text">{this.props.trichDan}</p>
                         </div>
                     </div>

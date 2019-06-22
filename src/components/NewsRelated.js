@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Link} from "react-router-dom";
+import {Link} from "react-router-dom";
 
 class NewsRelated extends Component {
     chuyenDoiURL = (str) => 
@@ -38,7 +38,9 @@ class NewsRelated extends Component {
                 <img className="card-img-top" src={this.props.anh} alt="react" />
             </Link>
             <div className="card-body">
-              <h4 className="card-title">{this.props.tieuDe}</h4>
+            
+              <h4 className="card-title"><Link to={"/tin-tuc/"+this.chuyenDoiURL(this.props.tieuDe)+"."+this.props.tinId+".html"}>{this.props.tieuDe}</Link></h4>
+          
               <p className="card-text">{this.props.trichDan}</p>
             </div>
           </div>

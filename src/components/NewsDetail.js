@@ -21,7 +21,7 @@ class NewsDetail extends Component {
                 {/* begin tin tuc */}
                 {
           dl.map((value,key)=>{
-            if(value.id== this.props.match.params.id){
+            if(value.id===parseInt(this.props.match.params.id,20) ){
               return(
                 <div className="jumbotron jumbotron-fluid" key={key}>
                 <div className="container">
@@ -34,7 +34,7 @@ class NewsDetail extends Component {
                 </div>
               </div>
               )
-            }
+            }else {return true;}
           })
         }
                   <div className="container">
@@ -45,7 +45,7 @@ class NewsDetail extends Component {
                     <div className="card-deck">
                       {
                         dl.map((value,key)=>{
-                          if(value.id != this.props.match.params.id){
+                          if(value.id !== parseInt(this.props.match.params.id,20) ){
                             if(dem<=4){
                               dem++;
                               return(
@@ -59,7 +59,7 @@ class NewsDetail extends Component {
                               )
                             }
                           }
-                          
+                         return true; 
                         })
                       }
                     </div>

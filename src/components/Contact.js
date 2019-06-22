@@ -9,7 +9,6 @@ class Contact extends Component {
       fName:"",
       fEmail:"",
       fPhone:"",
-      fEmail:"",
       fMess:"",
     }
   }
