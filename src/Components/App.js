@@ -1,22 +1,26 @@
 import React,{Component} from 'react';
 import './../App.css';
+import Header from './Header.js'
+import Search from './Search.js'
+import TableData from './TableData.js'
+import AddUser from './AddUser.js'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header/>
+      <div class="search-form">
+        <div class="container">
+          <div class="row">
+            <Search/>
+            <TableData/>
+            <AddUser/>
+          </div>
+        </div>
+      </div>
+
+      
+      
     </div>
   );
 }
