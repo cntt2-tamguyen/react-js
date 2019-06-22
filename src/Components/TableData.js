@@ -16,7 +16,7 @@ class TableData extends Component {
                     </thead>
                     <tbody>
                     <tr>
-                        <td scope="row">1</td>
+                        <td >1</td>
                         <td>Trần Đức Lương</td>
                         <td>098899881722</td>
                         <td>Moderator</td>
@@ -28,7 +28,7 @@ class TableData extends Component {
                         </td>
                     </tr>
                     <tr>
-                        <td scope="row">2</td>
+                        <td >2</td>
                         <td>Trần Đức Lương</td>
                         <td>098899881722</td>
                         <td>Moderator</td>
@@ -40,7 +40,7 @@ class TableData extends Component {
                         </td>
                     </tr>
                     <tr>
-                        <td scope="row">3</td>
+                        <td >3</td>
                         <td>Trần Đức Lương</td>
                         <td>098899881722</td>
                         <td>Moderator</td>
@@ -52,7 +52,7 @@ class TableData extends Component {
                         </td>
                     </tr>
                     <tr>
-                        <td scope="row">4</td>
+                        <td >4</td>
                         <td>Trần Đức Lương</td>
                         <td>098899881722</td>
                         <td>Moderator</td>
@@ -64,7 +64,7 @@ class TableData extends Component {
                         </td>
                     </tr>
                     <tr>
-                        <td scope="row">5</td>
+                        <td >5</td>
                         <td>Trần Đức Lương</td>
                         <td>098899881722</td>
                         <td>Moderator</td>
@@ -76,7 +76,7 @@ class TableData extends Component {
                         </td>
                     </tr>
                     <tr>
-                        <td scope="row">6</td>
+                        <td >6</td>
                         <td>Trần Đức Lương</td>
                         <td>098899881722</td>
                         <td>Moderator</td>

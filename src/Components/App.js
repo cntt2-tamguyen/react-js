@@ -5,13 +5,14 @@ import Search from './Search.js'
 import TableData from './TableData.js'
 import AddUser from './AddUser.js'
 
-function App() {
-  return (
-    <div className="App">
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
       <Header/>
-      <div class="search-form">
-        <div class="container">
-          <div class="row">
+      <div className="search-form">
+        <div className="container">
+          <div className="row">
             <Search/>
             <TableData/>
             <AddUser/>
@@ -22,7 +23,8 @@ function App() {
       
       
     </div>
-  );
+    );
+  }
 }
 
 export default App;
