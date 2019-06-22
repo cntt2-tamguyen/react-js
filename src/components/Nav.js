@@ -20,9 +20,6 @@ class Nav extends Component {
                             <NavLink className="nav-link js-scroll-trigger" to="/tin">Tin tức</NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink className="nav-link js-scroll-trigger" to="/tin-chi-tiet">Tin chi tiết</NavLink>
-                        </li>
-                        <li className="nav-item">
                             <NavLink className="nav-link js-scroll-trigger" to="/contact">Contact</NavLink>
                         </li>
                     </ul>
