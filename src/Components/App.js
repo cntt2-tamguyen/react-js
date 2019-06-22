@@ -6,9 +6,22 @@ import TableData from './TableData.js'
 import AddUser from './AddUser.js'
 
 class App extends Component {
-  thongBao = () =>{
-    alert("Kết nối thành công")
+  constructor(props) {
+    super(props);
+    this.state = {
+      hienThiForm : true
+    }
   }
+  
+  doiTrangThai = () => {
+    this.setState({
+       hienThiForm : !this.state.hienThiForm
+    });
+  }
+  // thongBao = () =>{
+  //   alert("Kết nối thành công")
+  // }
+
   render() {
     return (
       <div className="App">
@@ -16,9 +29,9 @@ class App extends Component {
       <div className="search-form">
         <div className="container">
           <div className="row">
-            <Search ketNoi={()=>this.thongBao()}/>
+            <Search ketNoi={()=>this.doiTrangThai()}/>
             <TableData/>
-            <AddUser/>
+            <AddUser hienThiForm={this.state.hienThiForm}/>
           </div>
         </div>
       </div>
