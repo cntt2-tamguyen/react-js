@@ -6,6 +6,9 @@ import TableData from './TableData.js'
 import AddUser from './AddUser.js'
 
 class App extends Component {
+  thongBao = () =>{
+    alert("Kết nối thành công")
+  }
   render() {
     return (
       <div className="App">
@@ -13,15 +16,12 @@ class App extends Component {
       <div className="search-form">
         <div className="container">
           <div className="row">
-            <Search/>
+            <Search ketNoi={()=>this.thongBao()}/>
             <TableData/>
             <AddUser/>
           </div>
         </div>
       </div>
-
-      
-      
     </div>
     );
   }
