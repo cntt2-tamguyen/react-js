@@ -7,7 +7,6 @@ import AddUser from './AddUser.js'
 import DataUser from './DataUser.json'
 
 const uuidv1=require('uuid/v1')
-var tempUser = {}
 class App extends Component {
   constructor(props) {
     super(props);
@@ -47,9 +46,10 @@ class App extends Component {
   }
 
   editUser = (user) => {
-    tempUser=user;
+    var temp = {};
+    temp=user;
     this.setState({
-      userEditOject:tempUser
+      userEditOject:temp
     });
   }
   
@@ -57,6 +57,10 @@ class App extends Component {
     this.setState({
       editUserStatus : !this.state.editUserStatus
     });
+  }
+
+  getEditUserInfoApp = (info) => {
+    console.log(info.name) 
   }
 
   render() {
@@ -78,7 +82,8 @@ class App extends Component {
               hienThiForm={this.state.hienThiForm}
               editUserStatus={this.state.editUserStatus}
               changeEditUserStatus={()=>this.changeEditUserStatus()}
-              userEditOject={this.state.userEditOject}/>
+              userEditOject={this.state.userEditOject}
+              getEditUserInfoApp = {(info)=>this.getEditUserInfoApp(info)}/>
             <TableData 
               dataUserProps={ketQua} 
               editFun={(user)=>this.editUser(user)}
