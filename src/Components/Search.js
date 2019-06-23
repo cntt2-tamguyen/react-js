@@ -4,10 +4,10 @@ class Search extends Component {
     
     hienThiNut = () => {
         if (this.props.hienThiForm===true) {
-            return <div className="btn btn-block btn-outline-secondary"  onClick={()=>this.props.ketNoi()}>Đóng lại</div>;
+            return <div className="btn btn-block btn-outline-secondary ml-2"  onClick={()=>this.props.ketNoi()}>Đóng lại</div>;
         }
         else {
-            return <div className="btn btn-block btn-outline-info"  onClick={()=>this.props.ketNoi()}>Thêm mới</div>;
+            return <div className="btn btn-block btn-outline-info ml-2"  onClick={()=>this.props.ketNoi()}>Thêm mới</div>;
         }
     }
     
@@ -18,11 +18,13 @@ class Search extends Component {
                     <div className="form-group">
                         <div className="btn-group">
                             <input type="text" className="form-control" aria-describedby="helpId" placeholder="Nhập từ khóa" />
-                            <div className="btn btn-info">Tìm</div>
+                            <div className="btn btn-info" onClick={this.props.checkConnectProps}>Tìm</div>
+                        </div>
+                        <div className="btn-group">
+                            {this.hienThiNut()}
                         </div>
                     </div>
-                    {this.hienThiNut()}
-                     <hr />
+                    <hr/>
                 </div>
           
         );

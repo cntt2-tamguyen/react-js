@@ -20,6 +20,11 @@ class App extends Component {
        hienThiForm : !this.state.hienThiForm
     });
   }
+
+  checkConnect = () => {
+    alert('Ket noi thanh cong')
+  }
+
   render() {
     return (
       <div className="App">
@@ -27,7 +32,9 @@ class App extends Component {
       <div className="search-form">
         <div className="container">
           <div className="row">
-            <Search ketNoi={()=>this.doiTrangThai()} hienThiForm={this.state.hienThiForm}/>
+            <Search
+              checkConnectProps={()=>this.checkConnect()}
+              ketNoi={()=>this.doiTrangThai()} hienThiForm={this.state.hienThiForm}/>
             <TableData dataUserProps={this.state.data}/>
             <AddUser hienThiForm={this.state.hienThiForm}/>
           </div>
