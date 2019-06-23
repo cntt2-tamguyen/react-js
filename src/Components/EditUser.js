@@ -23,7 +23,7 @@ class EditUser extends Component {
                                 </select>
                             </div>
                             <div className="form-group">
-                                <input type="reset" className="btn btn-block btn-primary" value="Lưu thông tin"/>
+                                <input type="reset" className="btn btn-block btn-primary" value="Save" onClick={()=>this.props.changeEditUserStatus()}/>
                             </div>
                         </div>
                     </div>

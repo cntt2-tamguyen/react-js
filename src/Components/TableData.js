@@ -9,7 +9,8 @@ class TableData extends Component {
                 name={value.name} 
                 phone={value.phone} 
                 permission={value.permission} 
-                editFunClick={(user)=>this.props.editFun(value)}/>
+                editFunClick={(user)=>this.props.editFun(value)}
+                changeEditUserStatus={()=>this.props.changeEditUserStatus()}/>
         ))
     render() {
         return (
