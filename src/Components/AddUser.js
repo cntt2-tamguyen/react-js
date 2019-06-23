@@ -18,11 +18,7 @@ class AddUser extends Component {
             [name]:value
         });
         //packet to item
-        var item = [];
-        item.id=this.state.id;
-        item.name=this.state.name;
-        item.phone=this.state.phone;
-        item.permission=this.state.permission;
+        
     }
 
     kiemTraTrangThai = () => {
@@ -47,7 +43,7 @@ class AddUser extends Component {
                                 </select>
                             </div>
                             <div className="form-group">
-                                <div className="btn btn-block btn-primary">Thêm mới</div>
+                                <div className="btn btn-block btn-primary" onClick={(name,phone,permission)=>this.props.add(this.state.name,this.state.phone,this.state.permission)}>Thêm mới</div>
                             </div>
                         </div>
                     </div>

@@ -28,6 +28,15 @@ class App extends Component {
     })
   }
 
+  getUserData = (name,phone,permission) => {
+    var item = {};
+    item.id="";
+    item.name=name;
+    item.phone=phone;
+    item.permission=permission;
+    console.log(item);
+  }
+
   render() {
     var ketQua=[];
     this.state.data.forEach((item) => {
@@ -45,7 +54,7 @@ class App extends Component {
               checkConnectProps={(dl)=>this.getTextSearch(dl)}
               ketNoi={()=>this.doiTrangThai()} hienThiForm={this.state.hienThiForm}/>
             <TableData dataUserProps={ketQua}/>
-            <AddUser hienThiForm={this.state.hienThiForm}/>
+            <AddUser hienThiForm={this.state.hienThiForm} add={(name,phone,permission)=>this.getUserData(name,phone,permission)}/>
           </div>
         </div>
       </div>
