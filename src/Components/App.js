@@ -35,7 +35,6 @@ class App extends Component {
        ketQua.push(item);
       }
     });
-    console.log(ketQua);
     return (
       <div className="App">
       <Header/>

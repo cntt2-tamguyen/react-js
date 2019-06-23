@@ -1,6 +1,14 @@
 import React, { Component } from 'react';
 
 class AddUser extends Component {
+
+    isChange = (event) => {
+        const name = event.target.name;
+        const value = event.target.value;
+        console.log(name);
+        console.log(value);
+    }
+
     kiemTraTrangThai = () => {
         if (this.props.hienThiForm===true) {
             return (
@@ -9,13 +17,13 @@ class AddUser extends Component {
                         <div className="card-header">Thêm mới user vào hệ thống</div>
                         <div className="card-body">
                             <div className="form-group">
-                                <input type="text" className="form-control" aria-describedby="helpId" placeholder="Tên User" />
+                                <input type="text" className="form-control" aria-describedby="helpId" placeholder="Tên User" name="name" onChange={(event)=>this.isChange(event)}/>
                             </div>
                             <div className="form-group">
-                                <input type="text" className="form-control" aria-describedby="helpId" placeholder="Điện thoại" />
+                                <input type="text" className="form-control" aria-describedby="helpId" placeholder="Điện thoại" name="phone" onChange={(event)=>this.isChange(event)}/>
                             </div>
                             <div className="form-group">
-                                <select className="custom-select" required>
+                                <select className="custom-select" required name="permission" onChange={(event)=>this.isChange(event)}>
                                     <option value>Chọn quyền mặc định</option>
                                     <option value={1}>Admin</option>
                                     <option value={2}>Moderator</option>
