@@ -43,8 +43,9 @@ class App extends Component {
     console.log(item);
   }
 
-  editUser = () => {
-    alert('da ket noi')
+  editUser = (user) => {
+    alert('da ket noi');
+    console.log(user)
   }
 
   render() {
@@ -62,9 +63,14 @@ class App extends Component {
           <div className="row">
             <Search
               checkConnectProps={(dl)=>this.getTextSearch(dl)}
-              ketNoi={()=>this.doiTrangThai()} hienThiForm={this.state.hienThiForm}/>
-            <TableData dataUserProps={ketQua} editFun={()=>this.editUser()}/>
-            <AddUser hienThiForm={this.state.hienThiForm} add={(name,phone,permission)=>this.getUserData(name,phone,permission)}/>
+              ketNoi={()=>this.doiTrangThai()} 
+              hienThiForm={this.state.hienThiForm}/>
+            <TableData 
+              dataUserProps={ketQua} 
+              editFun={(user)=>this.editUser(user)}/>
+            <AddUser 
+              hienThiForm={this.state.hienThiForm} 
+              add={(name,phone,permission)=>this.getUserData(name,phone,permission)}/>
           </div>
         </div>
       </div>
