@@ -11,7 +11,8 @@ class App extends Component {
     super(props);
     this.state = {
       hienThiForm : false,
-      data:DataUser
+      data:DataUser,
+      searchText:''
     }
   }
   
@@ -22,10 +23,19 @@ class App extends Component {
   }
 
   getTextSearch = (dl) => {
-    console.log('du lieu bo nhan dc la ' + dl)
+    this.setState({
+      searchText:dl
+    })
   }
 
   render() {
+    var ketQua=[];
+    this.state.data.forEach((item) => {
+      if (item.name.indexOf(this.state.searchText) !== -1) {
+       ketQua.push(item);
+      }
+    });
+    console.log(ketQua);
     return (
       <div className="App">
       <Header/>

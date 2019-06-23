@@ -30,7 +30,7 @@ class Search extends Component {
                 <div className="col-12 text-left">
                     <div className="form-group">
                         <div className="btn-group">
-                            <input type="text" onChange={(event)=>this.isChange(event)} className="form-control" aria-describedby="helpId" placeholder="Nhập từ khóa" />
+                            <input type="text" onChange={(event)=>this.isChange(event)} className="form-control" aria-describedby="helpId" placeholder="Nhập tên cần tìm" />
                             <div className="btn btn-info" onClick={(dl)=>this.props.checkConnectProps(this.state.tempValue)}>Tìm</div>
                         </div>
                         <div className="btn-group">
