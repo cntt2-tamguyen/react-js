@@ -60,7 +60,13 @@ class App extends Component {
   }
 
   getEditUserInfoApp = (info) => {
-    console.log(info.name) 
+    this.state.data.forEach((value,key)=>{
+      if(value.id===info.id){
+        value.name=info.name;
+        value.phone=info.phone;
+        value.permission=info.permission;
+      }
+    })
   }
 
   render() {
