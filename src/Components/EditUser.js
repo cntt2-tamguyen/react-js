@@ -17,12 +17,22 @@ class EditUser extends Component {
         this.setState({[name]:value});
     }
 
+    saveBtn = () => {
+        var info = {};
+        info.id=this.state.id;
+        info.name=this.state.name;
+        info.phone=this.state.phone;
+        info.permission=this.state.permission;
+        this.props.getEditUserInfo(info);
+        this.props.changeEditUserStatus();//an form
+    }
+
     render() {        
         return (
             <div className="col">
                 <form>
                     <div className="card text-white bg-secondary mb-3 mt-2" style={{maxWidth: '18rem'}}>
-                        <div className="card-header text-center">Sửa thông tin User</div>
+                        <div className="card-header text-center">Edit User</div>
                         <div className="card-body">
                             <div className="form-group">
                                 <input onChange={(event)=>this.isChange(event)} defaultValue={this.props.userEditOject.name} type="text" className="form-control" aria-describedby="helpId" placeholder="Tên User" name="name" onChange={(event)=>this.isChange(event)}/>
@@ -38,7 +48,7 @@ class EditUser extends Component {
                                 </select>
                             </div>
                             <div className="form-group">
-                                <input type="reset" className="btn btn-block btn-primary" value="Save" onClick={()=>this.props.changeEditUserStatus()}/>
+                                <input type="button" className="btn btn-block btn-primary" value="Save" onClick={()=>this.saveBtn()}/>
                             </div>
                         </div>
                     </div>
