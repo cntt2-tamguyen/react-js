@@ -34,6 +34,11 @@ class App extends Component {
     item.name=name;
     item.phone=phone;
     item.permission=permission;
+    var items = this.state.data;
+    items.push(item);
+    this.setState({
+      data:items
+    });
     console.log(item);
   }
 
