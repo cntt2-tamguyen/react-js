@@ -6,6 +6,7 @@ import TableData from './TableData.js'
 import AddUser from './AddUser.js'
 import DataUser from './DataUser.json'
 
+const uuidv1=require('uuid/v1')
 class App extends Component {
   constructor(props) {
     super(props);
@@ -30,10 +31,10 @@ class App extends Component {
 
   getUserData = (name,phone,permission) => {
     var item = {};
-    item.id="";
-    item.name=name;
-    item.phone=phone;
-    item.permission=permission;
+    item.id = uuidv1();
+    item.name = name;
+    item.phone = phone;
+    item.permission = permission;
     var items = this.state.data;
     items.push(item);
     this.setState({
