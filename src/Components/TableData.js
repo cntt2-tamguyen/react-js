@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
+import TableDataRow from './TableDataRow.js'
 
 class TableData extends Component {
+    mappingDataUser = () => 
+        this.props.dataUserProps.map((value,key)=>(
+            <TableDataRow key={key} stt={key} name={value.name} phone={value.phone} permission={value.permission}/>
+        ))
     render() {
         return (
             <div className="col-9">
@@ -15,78 +20,7 @@ class TableData extends Component {
                     </tr>
                     </thead>
                     <tbody>
-                    <tr>
-                        <td >1</td>
-                        <td>Trần Đức Lương</td>
-                        <td>098899881722</td>
-                        <td>Moderator</td>
-                        <td>
-                        <div className="btn-group">
-                            <div className="btn btn-warning sua"><i className="fa fa-edit">Sửa</i></div>
-                            <div className="btn btn-danger xoa"><i className="fa fa-delete">Xóa</i></div>
-                        </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td >2</td>
-                        <td>Trần Đức Lương</td>
-                        <td>098899881722</td>
-                        <td>Moderator</td>
-                        <td>
-                        <div className="btn-group">
-                            <div className="btn btn-warning sua"><i className="fa fa-edit">Sửa</i></div>
-                            <div className="btn btn-danger xoa"><i className="fa fa-delete">Xóa</i></div>
-                        </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td >3</td>
-                        <td>Trần Đức Lương</td>
-                        <td>098899881722</td>
-                        <td>Moderator</td>
-                        <td>
-                        <div className="btn-group">
-                            <div className="btn btn-warning sua"><i className="fa fa-edit">Sửa</i></div>
-                            <div className="btn btn-danger xoa"><i className="fa fa-delete">Xóa</i></div>
-                        </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td >4</td>
-                        <td>Trần Đức Lương</td>
-                        <td>098899881722</td>
-                        <td>Moderator</td>
-                        <td>
-                        <div className="btn-group">
-                            <div className="btn btn-warning sua"><i className="fa fa-edit">Sửa</i></div>
-                            <div className="btn btn-danger xoa"><i className="fa fa-delete">Xóa</i></div>
-                        </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td >5</td>
-                        <td>Trần Đức Lương</td>
-                        <td>098899881722</td>
-                        <td>Moderator</td>
-                        <td>
-                        <div className="btn-group">
-                            <div className="btn btn-warning sua"><i className="fa fa-edit">Sửa</i></div>
-                            <div className="btn btn-danger xoa"><i className="fa fa-delete">Xóa</i></div>
-                        </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td >6</td>
-                        <td>Trần Đức Lương</td>
-                        <td>098899881722</td>
-                        <td>Moderator</td>
-                        <td>
-                        <div className="btn-group">
-                            <div className="btn btn-warning sua"><i className="fa fa-edit">Sửa</i></div>
-                            <div className="btn btn-danger xoa"><i className="fa fa-delete">Xóa</i></div>
-                        </div>
-                        </td>
-                    </tr>
+                        {this.mappingDataUser()}                  
                     </tbody>
                 </table>
             </div>
