@@ -45,7 +45,7 @@ class App extends Component {
             <Search
               checkConnectProps={(dl)=>this.getTextSearch(dl)}
               ketNoi={()=>this.doiTrangThai()} hienThiForm={this.state.hienThiForm}/>
-            <TableData dataUserProps={this.state.data}/>
+            <TableData dataUserProps={ketQua}/>
             <AddUser hienThiForm={this.state.hienThiForm}/>
           </div>
         </div>
