@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import EditUser from './EditUser.js'
 
 class Search extends Component {
     constructor(props) {
@@ -24,10 +25,18 @@ class Search extends Component {
         this.props.checkConnectProps(this.state.tempValue)
     }
     
+    isShowEditForm = () => {
+        if (this.props.editUserStatus===true) {
+            return <EditUser/>
+        }
+    }
+
     render() {
         return (
-          
                 <div className="col-12 text-left">
+                    <div className="row">
+                        {this.isShowEditForm()}
+                    </div>
                     <div className="form-group">
                         <div className="btn-group">
                             <input type="text" onChange={(event)=>this.isChange(event)} className="form-control" aria-describedby="helpId" placeholder="Nhập tên cần tìm" />

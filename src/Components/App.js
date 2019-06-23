@@ -13,7 +13,8 @@ class App extends Component {
     this.state = {
       hienThiForm : false,
       data:DataUser,
-      searchText:''
+      searchText:'',
+      editUserStatus:false
     }
   }
   
@@ -64,7 +65,8 @@ class App extends Component {
             <Search
               checkConnectProps={(dl)=>this.getTextSearch(dl)}
               ketNoi={()=>this.doiTrangThai()} 
-              hienThiForm={this.state.hienThiForm}/>
+              hienThiForm={this.state.hienThiForm}
+              editUserStatus={this.state.editUserStatus}/>
             <TableData 
               dataUserProps={ketQua} 
               editFun={(user)=>this.editUser(user)}/>

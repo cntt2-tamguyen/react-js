@@ -25,7 +25,7 @@ class AddUser extends Component {
         if (this.props.hienThiForm===true) {
             return (
                 <div className="col">
-                    <form>
+                    <form method="post">
                         <div className="card mb-3 mt-2" style={{maxWidth: '18rem'}}>
                             <div className="card-header">Thêm mới user vào hệ thống</div>
                             <div className="card-body">
