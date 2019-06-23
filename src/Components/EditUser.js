@@ -9,14 +9,13 @@ class EditUser extends Component {
                         <div className="card-header text-center">Sửa thông tin User</div>
                         <div className="card-body">
                             <div className="form-group">
-                                <input type="text" className="form-control" aria-describedby="helpId" placeholder="Tên User" name="name" onChange={(event)=>this.isChange(event)}/>
+                                <input defaultValue={this.props.userEditOject.name} type="text" className="form-control" aria-describedby="helpId" placeholder="Tên User" name="name" onChange={(event)=>this.isChange(event)}/>
                             </div>
                             <div className="form-group">
-                                <input type="text" className="form-control" aria-describedby="helpId" placeholder="Điện thoại" name="phone" />
+                                <input defaultValue={this.props.userEditOject.phone} type="text" className="form-control" aria-describedby="helpId" placeholder="Điện thoại" name="phone" />
                             </div>
                             <div className="form-group">
-                                <select className="custom-select" required name="permission" onChange={(event)=>this.isChange(event)}>
-                                    <option value>Chọn quyền mặc định</option>
+                                <select defaultValue={this.props.userEditOject.permission} className="custom-select" required name="permission" onChange={(event)=>this.isChange(event)}>
                                     <option value={1}>Admin</option>
                                     <option value={2}>Moderator</option>
                                     <option value={3}>Normal</option>
