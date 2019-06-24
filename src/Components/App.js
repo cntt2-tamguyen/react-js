@@ -70,7 +70,10 @@ class App extends Component {
   }
 
   deleteUser = (idUser) => {
-    console.log(idUser)
+    var temp = this.state.data.filter(item => item.id !== idUser);
+    this.setState({
+      data:temp
+    });
   }
 
   render() {
