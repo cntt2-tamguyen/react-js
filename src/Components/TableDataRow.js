@@ -12,6 +12,10 @@ class TableDataRow extends Component {
         this.props.changeEditUserStatus();
     }
 
+    deleteBtnClick = (idUser) => {
+        this.props.deleteBtnClick(idUser);
+    }
+
     render() {
         return (
             <tr>
@@ -21,8 +25,8 @@ class TableDataRow extends Component {
                 <td>{this.permissionShow()}</td>
                 <td>
                 <div className="btn-group">
-                    <div className="btn btn-warning sua"><i className="fa fa-edit" onClick={()=>this.editClick()}>Edit</i></div>
-                    <div className="btn btn-danger xoa"><i className="fa fa-delete">Delete</i></div>
+                    <div className="btn btn-warning sua" onClick={()=>this.editClick()}><i className="fa fa-edit" >Edit</i></div>
+                    <div className="btn btn-danger xoa" onClick={(idUser)=>this.deleteBtnClick(this.props.id)}><i className="fa fa-delete">Delete</i></div>
                 </div>
                 </td>
             </tr>
