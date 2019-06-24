@@ -38,9 +38,9 @@ class AddUser extends Component {
                                 <div className="form-group">
                                     <select className="custom-select" required name="permission" onChange={(event)=>this.isChange(event)}>
                                         <option value>Chọn quyền mặc định</option>
-                                        <option value={1}>Admin</option>
-                                        <option value={2}>Moderator</option>
-                                        <option value={3}>Normal</option>
+                                        <option value={"1"}>Admin</option>
+                                        <option value={"2"}>Moderator</option>
+                                        <option value={"3"}>Normal</option>
                                     </select>
                                 </div>
                                 <div className="form-group">

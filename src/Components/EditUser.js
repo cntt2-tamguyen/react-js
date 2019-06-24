@@ -35,13 +35,13 @@ class EditUser extends Component {
                         <div className="card-header text-center">Edit User</div>
                         <div className="card-body">
                             <div className="form-group">
-                                <input onChange={(event)=>this.isChange(event)} defaultValue={this.props.userEditOject.name} type="text" className="form-control" aria-describedby="helpId" placeholder="Tên User" name="name" onChange={(event)=>this.isChange(event)}/>
+                                <input onChange={(event)=>this.isChange(event)} defaultValue={this.props.userEditOject.name} type="text" className="form-control" aria-describedby="helpId" placeholder="Tên User" name="name" />
                             </div>
                             <div className="form-group">
                                 <input onChange={(event)=>this.isChange(event)} defaultValue={this.props.userEditOject.phone} type="text" className="form-control" aria-describedby="helpId" placeholder="Điện thoại" name="phone" />
                             </div>
                             <div className="form-group">
-                                <select onChange={(event)=>this.isChange(event)} defaultValue={this.props.userEditOject.permission} className="custom-select" required name="permission" onChange={(event)=>this.isChange(event)}>
+                                <select onChange={(event)=>this.isChange(event)} defaultValue={this.props.userEditOject.permission} className="custom-select" required name="permission">
                                     <option value={1}>Admin</option>
                                     <option value={2}>Moderator</option>
                                     <option value={3}>Normal</option>

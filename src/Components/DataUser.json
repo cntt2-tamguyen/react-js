@@ -3,36 +3,36 @@
         "id":1,
         "name":"Nguyễn Nhân Tâm",
         "phone":"0386009181",
-        "permission":1
+        "permission":"1"
     },
     {
         "id":2,
         "name":"Trần Đức Lương",
         "phone":"098899881722",
-        "permission":3
+        "permission":"3"
     },
     {
         "id":3,
         "name":"Nguyễn Thị Vân Anh",
         "phone":"068426974",
-        "permission":2
+        "permission":"2"
     },
     {
         "id":4,
         "name":"Trần Phong Sơn",
         "phone":"036415698",
-        "permission":2
+        "permission":"2"
     },
     {
         "id":5,
         "name":"Trương Thị Thủy Ngân",
         "phone":"036125487",
-        "permission":1
+        "permission":"1"
     },
     {
         "id":6,
         "name":"Lê Nguyễn Việt Hưng",
         "phone":"031523421",
-        "permission":3
+        "permission":"3"
     }
 ]

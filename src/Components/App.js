@@ -12,10 +12,22 @@ class App extends Component {
     super(props);
     this.state = {
       hienThiForm : false,
-      data:DataUser,
+      data:[],
       searchText:'',
       editUserStatus:false,
       userEditOject: []
+    }
+  }
+  
+  componentWillMount() {
+    //kiem  tra xem co localStorage chay chua
+    if (localStorage.getItem('userData') == null){
+      localStorage.setItem('userData',JSON.stringify(DataUser));
+    }else{
+      var temp = JSON.parse(localStorage.getItem('userData'));
+      this.setState({
+        data:temp
+      });
     }
   }
   
@@ -31,7 +43,7 @@ class App extends Component {
     })
   }
 
-  getUserData = (name,phone,permission) => {
+  getNewUserData = (name,phone,permission) => {
     var item = {};
     item.id = uuidv1();
     item.name = name;
@@ -43,6 +55,7 @@ class App extends Component {
       data:items
     });
     console.log(item);
+    localStorage.setItem('userData',JSON.stringify(items));
   }
 
   editUser = (user) => {
@@ -67,6 +80,8 @@ class App extends Component {
         value.permission=info.permission;
       }
     })
+    localStorage.setItem('userData',JSON.stringify(this.state.data));
+    
   }
 
   deleteUser = (idUser) => {
@@ -74,6 +89,8 @@ class App extends Component {
     this.setState({
       data:temp
     });
+    //day vao du lieu
+    localStorage.setItem('userData',JSON.stringify(temp));
   }
 
   render() {
@@ -104,7 +121,7 @@ class App extends Component {
               deleteUser={(idUser)=>this.deleteUser(idUser)}/>
             <AddUser 
               hienThiForm={this.state.hienThiForm} 
-              add={(name,phone,permission)=>this.getUserData(name,phone,permission)}/>
+              add={(name,phone,permission)=>this.getNewUserData(name,phone,permission)}/>
           </div>
         </div>
       </div>
