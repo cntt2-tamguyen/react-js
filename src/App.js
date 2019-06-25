@@ -9,9 +9,11 @@ function App() {
     editStatus:true
   }
   var reducer1  = (state=oldState,action) => {
-    switch (action.value) {
+    switch (action.type) {
       case "CHANGE_EDIT_STATUS":
-        return {...state,editStatus:!state.editStatus}    
+        return {...state,editStatus:!state.editStatus};
+      case "ADD_NEW":
+        return {...state,num:[...state.num,action.newItem]};
       default:
         break;
     }
@@ -20,7 +22,11 @@ function App() {
   var store1 = redux.createStore(reducer1);
   store1.dispatch({type:"CHANGE_EDIT_STATUS"});
   console.log(store1.getState());
-
+  store1.dispatch({
+    type:"ADD_NEW",
+    newItem:'tai nghe'
+  });
+  console.log(store1.getState());
 
   return (
     <div className="App">
