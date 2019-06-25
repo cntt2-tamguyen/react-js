@@ -1,3 +1,6 @@
+import numReducer from './reducers/numReducer';
+import editStatusReducer from './reducers/editStatusReducer';
+
 var redux = require('redux');
 var oldState = {
   num:['man hinh','chuot','ban phim'],
@@ -14,8 +17,13 @@ var reducer1  = (state=oldState,action) => {
     default:
       return state;
   }
-  
 }
+
+const allReducers = redux.combineReducers({
+    num:numReducer,
+    editStatus:editStatusReducer
+})
+
 var store1 = redux.createStore(reducer1);
 store1.dispatch({type:"CHANGE_EDIT_STATUS"});
 store1.subscribe( () => {
