@@ -3,6 +3,25 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  var redux = require('redux');
+  var oldState = {
+    num:['man hinh','chuot','ban phim'],
+    editStatus:true
+  }
+  var reducer1  = (state=oldState,action) => {
+    switch (action.value) {
+      case "CHANGE_EDIT_STATUS":
+        return {...state,editStatus:!state.editStatus}    
+      default:
+        break;
+    }
+    return state;
+  }
+  var store1 = redux.createStore(reducer1);
+  store1.dispatch({type:"CHANGE_EDIT_STATUS"});
+  console.log(store1.getState());
+
+
   return (
     <div className="App">
       <header className="App-header">
