@@ -23,6 +23,9 @@ const allReducer = (state = noteInitialState, action) => {
                 noteContent: action.getItem.noteContent
             })
             return {...state,editItem:{}}
+        case "DELETE":
+            noteData.child(action.deleteId).remove();
+            return state
         default:
             return state
     }

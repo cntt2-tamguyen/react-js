@@ -6,6 +6,10 @@ class NoteItem extends Component {
         this.props.changeEditStatus();
         this.props.getEditData(this.props.note)
     }
+
+    deleteData = () => {
+        this.props.getDeleteData(this.props.note.key)
+    }
     
     render() {
         return (
@@ -17,7 +21,7 @@ class NoteItem extends Component {
                     </a>
                     <div className="btn-group float-right">
                         <button className="btn btn-outline-info" onClick={() =>this.twoActionButton()}>Edit</button>
-                        <button className="btn btn-outline-danger">Delete</button>
+                        <button className="btn btn-outline-danger"onClick={() =>this.deleteData()}>Delete</button>
                     </div>
                 </h5>
             </div>
@@ -48,6 +52,12 @@ const mapDispatchToProps = (dispatch, ownProps) => {
             dispatch({
               type : "GET_EDIT_DATA",
               editObject
+            })
+        },
+        getDeleteData: (deleteId) => {
+            dispatch({
+              type : "DELETE",
+              deleteId
             })
         }
     }
