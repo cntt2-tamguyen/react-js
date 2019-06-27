@@ -49,7 +49,7 @@ class NoteForm extends Component {
     render() {
         return (
             <div className="col-4">
-                <h3>Edit Note</h3>
+                <h3>Add or Edit Note</h3>
                 <form>
                     <div className="form-group">
                         <label >Tiêu đề Note</label>

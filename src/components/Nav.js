@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 class Nav extends Component {
     handleAdd = (event) => {
         event.preventDefault();
+        this.props.changeEditStatus();
     }
     render() {
         return (
@@ -23,5 +25,18 @@ class Nav extends Component {
         );
     }
 }
+const mapStateToProps = (state, ownProps) => {
+    return {
 
-export default Nav;
+    }
+}
+const mapDispatchToProps = (dispatch, ownProps) => {
+    return {
+        changeEditStatus: () => {
+            dispatch({
+                type:"CHANGE_EDIT_STATUS"
+            })
+        }
+    }
+}
+export default connect(mapStateToProps,mapDispatchToProps)(Nav);
