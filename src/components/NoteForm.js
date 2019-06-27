@@ -46,10 +46,18 @@ class NoteForm extends Component {
         this.props.changeEditStatus();
     }
 
+    printTitle = () => {
+        if(this.props.addStatus){
+            return <h4>Add Note</h4>
+        }else{
+            return <h4>Edit Note</h4>
+        }
+    }
+
     render() {
         return (
             <div className="col-4">
-                <h3>Add or Edit Note</h3>
+                {this.printTitle()}
                 <form>
                     <div className="form-group">
                         <label >Tiêu đề Note</label>
@@ -70,7 +78,8 @@ class NoteForm extends Component {
 
 const mapStateToProps = (state, ownProps) => {
     return {
-        editItem: state.editItem
+        editItem: state.editItem,
+        addStatus: state.isAdd
     }
 }
 

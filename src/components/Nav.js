@@ -5,6 +5,7 @@ class Nav extends Component {
     handleAdd = (event) => {
         event.preventDefault();
         this.props.changeEditStatus();
+        this.props.changeAddStatus();
     }
     render() {
         return (
@@ -35,6 +36,11 @@ const mapDispatchToProps = (dispatch, ownProps) => {
         changeEditStatus: () => {
             dispatch({
                 type:"CHANGE_EDIT_STATUS"
+            })
+        },
+        changeAddStatus: () => {
+            dispatch({
+                type:"CHANGE_ADD_STATUS"
             })
         }
     }
