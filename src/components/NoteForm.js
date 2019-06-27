@@ -6,9 +6,21 @@ class NoteForm extends Component {
         super(props);
         this.state = {
             noteTitle:'',
-            noteContent:''
+            noteContent:'',
+            id:''
         }
     }
+    
+    componentWillMount() {
+        if(this.props.editItem){
+            this.setState({
+                noteTitle: this.props.editItem.noteTitle,
+                noteContent: this.props.editItem.noteContent,
+                id: this.props.editItem.key,
+            });
+        }
+    }
+    
 
     isChange = (event) => {
         const name = event.target.name;
