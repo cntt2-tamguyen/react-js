@@ -4,7 +4,6 @@ import Nav from './Nav';
 import NoteForm from './NoteForm';
 import NoteList from './NoteList';
 import {noteData} from './firebaseConnect'
-import * as  firebase from 'firebase'
 
 class App extends Component {
   constructor(props) {
@@ -28,7 +27,7 @@ class App extends Component {
               getData={(item)=>this.addData(item)}/>
           </div>
         </div>
-      </div>
+    </div>
     );
   }
 }
