@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {connect} from 'react-redux';
 
 class NoteItem extends Component {
     render() {
@@ -6,12 +7,11 @@ class NoteItem extends Component {
             <div className="card">
             <div className="card-header" role="tab" id="note1-content">
                 <h5 className="mb-0">
-                    <a data-toggle="collapse" data-parent="#noteList" href={"#number" + this.props.i} aria-expanded="true" aria-controls="note1"> 
-
+                    <a data-toggle="collapse" data-parent="#noteList" href={"#number" + this.props.i} aria-expanded="true" aria-controls="note1">
                         {this.props.noteTitle}
                     </a>
                     <div className="btn-group float-right">
-                        <button className="btn btn-outline-info">Edit</button>
+                        <button className="btn btn-outline-info" onClick={() => this.props.changeEditStatus()}>Edit</button>
                         <button className="btn btn-outline-danger">Delete</button>
                     </div>
                 </h5>
@@ -26,4 +26,20 @@ class NoteItem extends Component {
     }
 }
 
-export default NoteItem; 
+const mapStateToProps = (state, ownProps) => {
+    return {
+       
+    }
+}
+
+const mapDispatchToProps = (dispatch, ownProps) => {
+    return {
+        changeEditStatus: () => {
+            dispatch({
+              type : "CHANGE_EDIT_STATUS"
+            })
+          }
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(NoteItem)
