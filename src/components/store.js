@@ -17,7 +17,8 @@ const allReducer = (state = noteInitialState, action) => {
         
         case "GET_EDIT_DATA":
             return {...state,editItem:action.editObject}
-
+        case "EDIT":
+            return {...state,editItem:{}}
         default:
             return state
     }
