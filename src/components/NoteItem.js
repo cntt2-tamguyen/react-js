@@ -6,6 +6,7 @@ class NoteItem extends Component {
         this.props.changeEditStatus();
         this.props.getEditData(this.props.note)
     }
+    
     render() {
         return (
             <div className="card">
@@ -48,7 +49,7 @@ const mapDispatchToProps = (dispatch, ownProps) => {
               type : "GET_EDIT_DATA",
               editObject
             })
-        },
+        }
     }
 }
 

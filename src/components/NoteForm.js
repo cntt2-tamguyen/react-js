@@ -32,12 +32,12 @@ class NoteForm extends Component {
                 <form>
                     <div className="form-group">
                         <label >Tiêu đề Note</label>
-                        <input onChange={(event) =>this.isChange(event)} type="text" className="form-control" name="noteTitle" id="noteTitle" aria-describedby="helpIdNoteTitle" placeholder="Tiêu đề Note" />
+                        <input  defaultValue={this.props.editItem.noteTitle} onChange={(event) =>this.isChange(event)} type="text" className="form-control" name="noteTitle" id="noteTitle" aria-describedby="helpIdNoteTitle" placeholder="Tiêu đề Note" />
                         <small id="helpIdNoteTitle" className="form-text text-muted">Điền tiêu đề vào đây</small>
                     </div>
                     <div className="form-group">
                         <label >Nội dung Note</label>
-                        <textarea onChange={(event) =>this.isChange(event)} type="text" className="form-control" name="noteContent" id="noteContent" aria-describedby="helpIdNoteContent" placeholder="Nội dung Note" defaultValue={""} />
+                        <textarea  defaultValue={this.props.editItem.noteContent} onChange={(event) =>this.isChange(event)} type="text" className="form-control" name="noteContent" id="noteContent" aria-describedby="helpIdNoteContent" placeholder="Nội dung Note" />
                         <small id="helpIdNoteContent" className="form-text text-muted">Điền nội dung vào đây</small>
                     </div>
                     <button type="reset" onClick={()=>this.addData(this.state.noteTitle,this.state.noteContent)} className="btn btn-primary btn-block">Save</button>
@@ -49,7 +49,7 @@ class NoteForm extends Component {
 
 const mapStateToProps = (state, ownProps) => {
     return {
-        testThoi: state.testConnect
+        editItem: state.editItem
     }
 }
 
