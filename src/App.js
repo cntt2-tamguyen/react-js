@@ -6,13 +6,19 @@ import * as  firebase from 'firebase'
 
 class App extends Component {
  
-  pushData  = () => {
+  pushData = () => {
     var connectData = firebase.database().ref('dataForNote');
     connectData.push({
       titleNote:'Tiêu đề ghi chú số 3',
       contentNote:'Nội dung ghi chú số 3'
     })
   }
+
+  deleteData = (id) => {
+    var connectData = firebase.database().ref('dataForNote');
+    connectData.child(id).remove();
+  }
+
   render() {
     return (
       <div className="App">
@@ -30,7 +36,9 @@ class App extends Component {
             Learn React
           </a>
         </header>
-        <button onClick={() =>this.pushData()}>Click</button>
+        <button onClick={() =>this.pushData()}>ClickPhush</button>
+        <hr/>
+        <button onClick={() =>this.deleteData('-LiLz-CFRR9Yr86t9JJA')}>ClickDelete</button>
       </div>
     );
   }
