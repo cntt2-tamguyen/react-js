@@ -37,6 +37,7 @@ class NoteList extends Component {
                     i={key}
                     noteTitle={value.noteTitle}
                     noteContent={value.noteContent}
+                    note={value}
                     />
                )
            })
