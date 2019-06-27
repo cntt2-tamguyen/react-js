@@ -32,7 +32,14 @@ const allReducer = (state = noteInitialState, action) => {
             return state
             
         case "CHANGE_ADD_STATUS":
-                return {...state,isAdd:!state.isAdd}
+            return {...state,isAdd:!state.isAdd}
+
+        case "ALERT_ON":
+            return {...state,alertShow:true}
+        
+        case "ALERT_OFF":
+            return {...state,alertShow:false}
+
         default:
             return state
     }

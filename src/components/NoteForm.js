@@ -44,6 +44,7 @@ class NoteForm extends Component {
             this.props.addDataStore(item);
         }
         this.props.changeEditStatus();
+        this.props.alertOn();
     }
 
     printTitle = () => {
@@ -93,6 +94,12 @@ const mapDispatchToProps = (dispatch, ownProps) => {
         },
         changeEditStatus: () => {
             dispatch({type:"CHANGE_EDIT_STATUS"})
+        },
+        alertOn: () => {
+            dispatch({type:"ALERT_ON"})
+        },
+        alertOff: () => {
+            dispatch({type:"ALERT_OFF"})
         }
     }
 }

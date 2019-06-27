@@ -7,21 +7,19 @@ class AlertInfo extends Component {
         if(this.props.alertShow===false) return null;
         return (
             <AlertContainer>
-                <Alert type="info">Hello, world</Alert>
+                <Alert type="info">Thông báo</Alert>
             </AlertContainer>
         );
     }
 }
 const mapStateToProps = (state, ownProps) => {
     return {
-
+        alertShow:state.alertShow
     }
 }
 const mapDispatchToProps = (dispatch, ownProps) => {
     return {
-        // dispatch1: () => {
-        //     dispatch(actionCreator)
-        // }
+
     }
 }
 export default connect(mapStateToProps,mapDispatchToProps)(AlertInfo);
