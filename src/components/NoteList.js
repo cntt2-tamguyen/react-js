@@ -30,7 +30,16 @@ class NoteList extends Component {
     
     getData = () => { 
         if(this.state.dataFirebase){
-            console.log(this.state.dataFirebase)
+           return this.state.dataFirebase.map((value,key)=>{
+               return (
+                   <NoteItem
+                    key={key}
+                    i={key}
+                    noteTitle={value.noteTitle}
+                    noteContent={value.noteContent}
+                    />
+               )
+           })
         }
     }
             
@@ -39,10 +48,6 @@ class NoteList extends Component {
             <div className="col">
                 <div id="noteList" role="tablist" aria-multiselectable="true">
                     {this.getData()}
-                    <NoteItem/>
-                    <NoteItem/>
-                    <NoteItem/>
-                    <NoteItem/>
                 </div>
             </div>
         );
