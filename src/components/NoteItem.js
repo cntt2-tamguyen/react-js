@@ -8,7 +8,8 @@ class NoteItem extends Component {
     }
 
     deleteData = () => {
-        this.props.getDeleteData(this.props.note.key)
+        this.props.getDeleteData(this.props.note.key);
+        this.props.alertOn('Xóa ghi chú " '+this.props.note.noteTitle+' " thành công','danger');
     }
     
     render() {
@@ -58,6 +59,13 @@ const mapDispatchToProps = (dispatch, ownProps) => {
             dispatch({
               type : "DELETE",
               deleteId
+            })
+        },
+        alertOn: (alertContent,alertType) => {
+            dispatch({
+                type:"ALERT_ON",
+                alertContent,
+                alertType
             })
         }
     }

@@ -37,13 +37,13 @@ class NoteForm extends Component {
             editObject.noteTitle=this.state.noteTitle;
             editObject.noteContent=this.state.noteContent;
             this.props.editDataStore(editObject);
-            this.props.alertOn('Đã sửa thành công');
+            this.props.alertOn('Đã sửa thành công','info');
         }else{
             var item = {};
             item.noteTitle=title;
             item.noteContent=content;
             this.props.addDataStore(item);
-            this.props.alertOn('Đã thêm thành công');
+            this.props.alertOn('Đã thêm thành công','success');
         }
         this.props.changeEditStatus();
     }
@@ -96,10 +96,11 @@ const mapDispatchToProps = (dispatch, ownProps) => {
         changeEditStatus: () => {
             dispatch({type:"CHANGE_EDIT_STATUS"})
         },
-        alertOn: (alertContent) => {
+        alertOn: (alertContent,alertType) => {
             dispatch({
                 type:"ALERT_ON",
-                alertContent
+                alertContent,
+                alertType
             })
         },
         alertOff: () => {
