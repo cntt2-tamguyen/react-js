@@ -43,6 +43,7 @@ class NoteForm extends Component {
             item.noteContent=content;
             this.props.addDataStore(item);
         }
+        this.props.changeEditStatus();
     }
 
     render() {
@@ -80,6 +81,9 @@ const mapDispatchToProps = (dispatch, ownProps) => {
         },
         editDataStore: (getItem) => {
             dispatch({type:"EDIT",getItem})
+        },
+        changeEditStatus: () => {
+            dispatch({type:"CHANGE_EDIT_STATUS"})
         }
     }
 }

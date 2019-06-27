@@ -18,6 +18,10 @@ const allReducer = (state = noteInitialState, action) => {
         case "GET_EDIT_DATA":
             return {...state,editItem:action.editObject}
         case "EDIT":
+            noteData.child(action.getItem.id).update({
+                noteTitle: action.getItem.noteTitle,
+                noteContent: action.getItem.noteContent
+            })
             return {...state,editItem:{}}
         default:
             return state
